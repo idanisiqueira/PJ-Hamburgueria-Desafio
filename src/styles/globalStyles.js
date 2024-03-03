@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'; // biblioteca de estilização
 
 export default createGlobalStyle`
 
@@ -12,12 +12,12 @@ export default createGlobalStyle`
         font-style: normal;
     }
 
-    #basic-addon1 {
+    #basic-addon1 { // estilização do ícone do bootstrap nos index.js das páginas
         background: rgba(255,255,255,0.5);
         border: none;
     }
 
-    #basic-addon2 {
+    #basic-addon2 { // estilização do ícone do bootstrap nos index.js das páginas
         background: none;
         border: none;
     }

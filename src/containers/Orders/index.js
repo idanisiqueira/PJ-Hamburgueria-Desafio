@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'; //para usar biblioteca do React
 
-import LogoTwo from '../../assets/pedido-logo.png';
-import { BsFillTrashFill } from "react-icons/bs";
+import LogoTwo from '../../assets/pedido-logo.png'; // logotipo da segunda página
+import { BsFillTrashFill } from "react-icons/bs"; // ícone do bootstrap no React
 
-import { Container, Input, Button, Image, ContainerItens, H1 } from './styles'
+import { Container, Button, Image, ContainerItens, H1 } from './styles' //importando elementos estilizados do styles.js
 
 const Orders = () => {
 
