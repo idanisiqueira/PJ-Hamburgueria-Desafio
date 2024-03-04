@@ -1,12 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react'; // para usar a biblioteca do React e ferramentas auxiliares
+import React, { useState, useRef } from 'react'; // para usar a biblioteca do React e ferramentas auxiliares
 import axios from 'axios'; // para usar API no React
 
 import LogoOne from '../../assets/dev-burguer-logo.png'; // logotipo da primeira página
 import { BsFillPersonFill } from "react-icons/bs"; // ícone do bootstrap no React
 import { BsCart4 } from "react-icons/bs"; // ícone do bootstrap no React
-import { BsFillTrashFill } from "react-icons/bs"; // ícone do bootstrap no React
 
-import { Container, Input, Button, Image, ContainerItens, H1, Order } from './styles' // importando elementos estilizados do styles.js
+import { Container, Input, Button, Image, ContainerItens, H1 } from './styles' // importando elementos estilizados do styles.js
 
 const App = () => {
 
@@ -19,28 +18,6 @@ const App = () => {
 
     setClientOrders([...clientOrders, newOrder]) // uso de spread operator (...) fazendo acrescentar o array antigo + item novo
   }
-
-  async function deleteOrder(orderId) { // função para deletar o pedido
-    
-    await axios.delete(`http://localhost:3001/order/${orderId}`)
-    
-    const newClientOrder = clientOrders.filter(order => order.id !== orderId)
-
-    setClientOrders(newClientOrder)
-  }
-
-  useEffect(() => { // react hook para recuperar as informações dos pedidos sempre que a página for reiniciada; ele não aceita função async junto dele, por isso deve-se criar uma função async dentro dele
-    async function fetchOrders() {
-
-      const { data: newOrders } = await axios.get("http://localhost:3001/order");
-
-      setClientOrders(newOrders);
-
-    };
-
-    fetchOrders()
-
-  }, [])
 
   return (
     <Container>
@@ -61,16 +38,6 @@ const App = () => {
         </div>
 
         <Button onClick={addNewOrder}>Novo Pedido</Button>
-
-
-        <ul>
-          {clientOrders.map((order =>
-            <Order key={order.id}>
-              {order.order}<div></div>{order.clientName}
-              <button onClick={() => deleteOrder(order.id)} id="basic-addon2"><BsFillTrashFill /></button>
-            </Order>
-          ))}
-        </ul>
 
       </ContainerItens>
     </Container>

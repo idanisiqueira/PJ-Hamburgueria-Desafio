@@ -9,6 +9,6 @@ import 'bootstrap/dist/js/bootstrap.bundle'; ////para usar bootstrap corretament
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <><Home /><GlobalStyle /></>);
+  <><Orders /><GlobalStyle /></>);
 
 

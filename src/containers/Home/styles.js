@@ -80,26 +80,3 @@ color: #000;
     
 }
 `;
-
-export const Order = styled.li `
-color:#fff;
-display: flex;
-justify-content: space-around;
-align-items: center;
-
-border-radius: 5px;
-background: rgba(255, 255, 255,0.5);
-box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
-border: none;
-outline: none;
-width: 255px;
-height: 40px;
-
-font-family: "Roboto", sans-serif;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin: 15px;
-margin-left: -30px;
-`;
