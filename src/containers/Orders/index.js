@@ -4,7 +4,7 @@ import axios from 'axios'; // para usar API no React
 import LogoTwo from '../../assets/pedido-logo.png'; // logotipo da segunda página
 import { BsFillTrashFill } from "react-icons/bs"; // ícone do bootstrap no React
 
-import { Container, Button, Image, ContainerItens, H1, Order } from './styles' //importando elementos estilizados do styles.js
+import { Container, Button, Image, ContainerItens, H1, Order, ParagraphOrder } from './styles' //importando elementos estilizados do styles.js
 
 const Orders = () => {
 
@@ -44,7 +44,10 @@ return (
         <ul>
           {clientOrders.map((order =>
             <Order key={order.id}>
-              {order.order}<div></div>{order.clientName}
+              <ParagraphOrder>
+              <p>{order.order}</p>
+              <b>{order.clientName}</b>
+              </ParagraphOrder>
               <button onClick={() => deleteOrder(order.id)} id="basic-addon2"><BsFillTrashFill /></button>
             </Order>
           ))}

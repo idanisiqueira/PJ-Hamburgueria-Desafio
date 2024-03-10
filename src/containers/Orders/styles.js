@@ -86,6 +86,8 @@ color:#fff;
 display: flex;
 justify-content: space-around;
 align-items: center;
+line-height: 10px;
+
 
 border-radius: 5px;
 background: rgba(255, 255, 255,0.5);
@@ -93,13 +95,23 @@ box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
 border: none;
 outline: none;
 width: 255px;
-height: 40px;
+height: 60px;
 
 font-family: "Roboto", sans-serif;
 font-size: 15px;
 font-style: normal;
 font-weight: 400;
-line-height: normal;
 margin: 15px;
 margin-left: -30px;
+`;
+
+export const ParagraphOrder = styled.div`
+  p {
+    align-content: space-between;
+    width: 188px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    color: #ffffff;
+  }
 `;
