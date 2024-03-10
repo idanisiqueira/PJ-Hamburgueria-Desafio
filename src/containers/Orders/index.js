@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom" // para poder navegar entre as te
 import LogoTwo from '../../assets/pedido-logo.png'; // logotipo da segunda página
 import { BsFillTrashFill } from "react-icons/bs"; // ícone do bootstrap no React
 
-import { Container, Button, Image, ContainerItens, H1, Order, ParagraphOrder } from './styles' //importando elementos estilizados do styles.js
+import H1 from "../../components/Title" // título componetizado sendo importado do styles
+
+import { Container, Button, Image, ContainerItens, Order, ParagraphOrder } from './styles' //importando elementos estilizados do styles.js
 
 const Orders = () => {
 

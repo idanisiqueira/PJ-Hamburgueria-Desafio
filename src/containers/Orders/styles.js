@@ -26,15 +26,6 @@ width: 200px;
 margin: 40px auto;
 `;
 
-export const H1 = styled.h1`
-color: #fff;
-font-family: "Roboto", sans-serif;
-font-weight: 700;
-font-size: 25px;
-margin-bottom: 30px;
-text-align: center;
-`;
-
 export const Input = styled.input`
 border-radius: 5px;
 background: rgba(255, 255, 255,0.5);

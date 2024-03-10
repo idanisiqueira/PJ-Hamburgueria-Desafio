@@ -5,8 +5,9 @@ import { useNavigate } from "react-router-dom" // para poder navegar entre as te
 import LogoOne from '../../assets/dev-burguer-logo.png'; // logotipo da primeira página
 import { BsFillPersonFill } from "react-icons/bs"; // ícone do bootstrap no React
 import { BsCart4 } from "react-icons/bs"; // ícone do bootstrap no React
+import H1 from "../../components/Title" // título componetizado sendo importado do styles
 
-import { Container, Input, Button, Image, ContainerItens, H1 } from './styles' // importando elementos estilizados do styles.js
+import { Container, Input, Button, Image, ContainerItens } from './styles' // importando elementos estilizados do styles.js
 
 const App = () => {
 
