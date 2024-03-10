@@ -4,11 +4,13 @@ import Background from "../../assets/bg.png"
 export const Container = styled.div`
 background: url("${Background}");
 background-size: cover;
+background-attachment: fixed;
 display: flex;
 flex-direction: column;
 align-items: center;
-gap: 20px;
-height: 100vh;
+gap: 40px;
+height: 100%;
+min-height: 100vh;
 `;
 
 export const ContainerItens = styled.div`
@@ -16,7 +18,7 @@ border-radius: 31px 31px 0px 0px;
 padding: 50px 36px;
 display: flex;
 flex-direction: column;
-height: 100vh;
+min-height: 100vh;
 `;
 
 export const Image = styled.img `

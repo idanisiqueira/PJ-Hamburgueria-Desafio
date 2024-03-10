@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'; // para usar a biblioteca do React e ferramentas auxiliares
 import axios from 'axios'; // para usar API no React
+import { useNavigate } from "react-router-dom" // para poder navegar entre as telas do projeto
 
 import LogoOne from '../../assets/dev-burguer-logo.png'; // logotipo da primeira página
 import { BsFillPersonFill } from "react-icons/bs"; // ícone do bootstrap no React
@@ -13,10 +14,15 @@ const App = () => {
   const inputOrder = useRef(); // pegando as informações de referência no input com o react hook useRef
   const inputName = useRef(); // pegando as informações de referência no input com o react hook useRef
 
+  const navigate = useNavigate() // para poder ir para a próxima tela do projeto
+
   async function addNewOrder() { // função para adicionar o pedido com id, pedido e nome
     const { data: newOrder } = await axios.post("http://localhost:3001/order", { order: inputOrder.current.value, clientName: inputName.current.value })
 
     setClientOrders([...clientOrders, newOrder]) // uso de spread operator (...) fazendo acrescentar o array antigo + item novo
+
+    navigate('/pedidos') // para ir à segunda tela de pedidos
+
   }
 
   return (

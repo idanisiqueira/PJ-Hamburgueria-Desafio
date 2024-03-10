@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'; // para usar a biblioteca do React e ferramentas auxiliares
 import axios from 'axios'; // para usar API no React
+import { useNavigate } from "react-router-dom" // para poder navegar entre as telas do projeto
 
 import LogoTwo from '../../assets/pedido-logo.png'; // logotipo da segunda página
 import { BsFillTrashFill } from "react-icons/bs"; // ícone do bootstrap no React
@@ -9,6 +10,8 @@ import { Container, Button, Image, ContainerItens, H1, Order, ParagraphOrder } f
 const Orders = () => {
 
     const [clientOrders, setClientOrders] = useState([]); // react hook para alterar o estado da página, fazendo assim atualizar a informação, acrescentando os valores completos na tela
+
+    const navigate = useNavigate() // para poder navegar para outra tela do projeto
 
     useEffect(() => { // react hook para recuperar as informações dos pedidos sempre que a página for reiniciada; ele não aceita função async junto dele, por isso deve-se criar uma função async dentro dele
         async function fetchOrders() {
@@ -32,6 +35,9 @@ const Orders = () => {
         setClientOrders(newClientOrder)
       }
 
+      function goBackPage(){ // função de retornar a página
+        navigate('/')
+      }
 
 return (
     <Container>
@@ -53,7 +59,7 @@ return (
           ))}
         </ul>
 
-        <Button>Voltar</Button>
+        <Button onClick={goBackPage}>Voltar</Button>
 
         </ContainerItens>
     </Container>
